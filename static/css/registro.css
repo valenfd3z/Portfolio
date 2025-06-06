@@ -54,3 +54,9 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.auth-links a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
