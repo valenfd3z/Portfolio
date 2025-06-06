@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="CYBER-COACH - Autenticación" />
+    <title>{% block title %}CYBER-COACH{% endblock %}</title>
+    
+    <!-- Precargar recursos críticos -->
+    <link rel="preload" href="{{ url_for('static', filename='css/styles.css') }}" as="style" />
+    <link rel="preload" href="{{ url_for('static', filename='js/index.js') }}" as="script" />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% block extra_css %}
+    <!-- Estilos específicos para esta página -->
+    {% endblock %}
+</head>
+<body>
+    <!-- Contenido principal -->
+    <main class="contenedor">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Scripts comunes -->
+    <script src="{{ url_for('static', filename='js/session.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

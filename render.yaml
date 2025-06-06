@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: my-flask-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: APP_HOST
+        value: 0.0.0.0
+      - key: APP_PORT
+        value: 8080
+    healthCheckPath: /health
+    healthCheckTimeout: 30
+    healthCheckInterval: 10
+    healthCheckRetries: 3
