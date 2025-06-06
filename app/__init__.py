@@ -33,12 +33,10 @@ def create_app():
         
         # Inicializar la base de datos con la aplicación
         init_db(app)
-        logger.info("Configuración cargada exitosamente")
-
-        # Inicializar la base de datos
-        db = SQLAlchemy(app)
-        app.db = db  # Hacer la base de datos accesible en toda la aplicación
         logger.info("Base de datos inicializada correctamente")
+        
+        # La base de datos ya está inicializada en init_db, no necesitamos crear otra instancia
+        app.db = db  # Usamos la instancia existente
 
         # Asegurarse de que la base de datos esté inicializada antes de registrar rutas
         with app.app_context():
