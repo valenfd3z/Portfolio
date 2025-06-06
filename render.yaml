@@ -3,6 +3,7 @@ services:
     name: cybercoach-app
     env: python
     buildCommand: |
+      pip install --upgrade pip
       pip install -r requirements.txt
       python -c "from app import db; db.create_all()"
     startCommand: |
