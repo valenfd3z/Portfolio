@@ -99,7 +99,7 @@ flask-restx==1.1.0
 flask-restplus==0.13.0
 
 # Manejo de errores
-Flask-Error==0.1
+
 
 distlib==0.3.9
 certifi==2025.4.26
