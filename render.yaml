@@ -3,9 +3,7 @@ services:
     name: cybercoach-app
     env: python
     buildCommand: |
-      # Instalar dependencias
       pip install -r requirements.txt
-      # Crear todas las tablas en la base de datos
       python -c "from app import db; db.create_all()"
     startCommand: |
       gunicorn --bind 0.0.0.0:8080 --workers 4 --timeout 30 --log-level info app:create_app()
@@ -26,18 +24,10 @@ services:
     resources:
       cpu: 1
       memory: 512Mi
-    envFile: .env
     database:
       name: cybercoach-db
       type: postgresql
       size: 10Gi
-    environment:
-      - key: FLASK_ENV
-        value: production
-      - key: DATABASE_URL
-        value: postgres://localhost:5432/cybercoach_db
-      - key: SECRET_KEY
-        value: your-secret-key-here
     ports:
       - port: 8080
         protocol: http
@@ -50,10 +40,3 @@ services:
     logs:
       retention: 30d
       maxFileSize: 100Mi
-    environment:
-      - key: FLASK_ENV
-        value: production
-      - key: DATABASE_URL
-        value: postgres://localhost:5432/cybercoach_db
-      - key: SECRET_KEY
-        value: your-secret-key-here
