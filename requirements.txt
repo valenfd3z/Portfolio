@@ -139,7 +139,7 @@ jsonschema==4.24.0
 jsonschema-specifications==2025.4.1
 jmespath==1.0.1
 idna==3.10
-identificar==2.6.12
+identify==2.6.12
 filelock==3.18.0
 marshmallow==3.21.0
 
