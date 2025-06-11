@@ -39,18 +39,59 @@ def registrar_usuario():
             # Obtener datos del formulario
             datos = request.form
             
+            # Validar contraseñas primero
+            password = datos.get('password', '').strip()
+            confirm_password = datos.get('confirm_password', '').strip()
+            
+            # Verificar que ambas contraseñas existan
+            if not password or not confirm_password:
+                return render_template('registro.html', 
+                                    error='Por favor ingrese ambas contraseñas.',
+                                    email=datos.get('email', ''),
+                                    username=datos.get('username', ''))
+
+            # Verificar longitud mínima
+            if len(password) < 6:
+                return render_template('registro.html', 
+                                    error='La contraseña debe tener al menos 6 caracteres.',
+                                    email=datos.get('email', ''),
+                                    username=datos.get('username', ''),
+                                    password='',
+                                    confirm_password='')
+
+            # Verificar que las contraseñas sean exactamente iguales
+            if password != confirm_password:
+                # Verificar también codificación
+                try:
+                    if password.encode('utf-8') != confirm_password.encode('utf-8'):
+                        return render_template('registro.html', 
+                                            error='Las contraseñas no coinciden. Por favor, verifique que ambas sean exactamente iguales.',
+                                            email=datos.get('email', ''),
+                                            username=datos.get('username', ''),
+                                            password='',
+                                            confirm_password='')
+                except UnicodeEncodeError:
+                    return render_template('registro.html', 
+                                        error='Error con los caracteres especiales en la contraseña. Por favor, use solo caracteres compatibles.',
+                                        email=datos.get('email', ''),
+                                        username=datos.get('username', ''),
+                                        password='',
+                                        confirm_password='')
+
+            # Verificar que no haya caracteres invisibles
+            if password != password.strip() or confirm_password != confirm_password.strip():
+                return render_template('registro.html', 
+                                    error='La contraseña contiene espacios o caracteres invisibles. Por favor, ingrese la contraseña sin espacios.',
+                                    email=datos.get('email', ''),
+                                    username=datos.get('username', ''),
+                                    password='',
+                                    confirm_password='')
+
             # Validaciones básicas
             campos_requeridos = ['email', 'username', 'password', 'confirm_password']
             if not all(datos.get(campo) for campo in campos_requeridos):
                 return render_template('registro.html', 
                                     error='Todos los campos son requeridos.',
-                                    email=datos.get('email', ''),
-                                    username=datos.get('username', ''))
-
-            # Validar contraseñas
-            if datos['password'] != datos['confirm_password']:
-                return render_template('registro.html', 
-                                    error='Las contraseñas no coinciden.',
                                     email=datos.get('email', ''),
                                     username=datos.get('username', ''))
 
@@ -170,12 +211,12 @@ def cambiar_contraseña():
             if not nueva_contraseña or not confirmar_contraseña:
                 return render_template('cambiar_contraseña.html', error='Por favor, completa todos los campos.')
 
-            if nueva_contraseña != confirmar_contraseña:
-                return render_template('cambiar_contraseña.html', error='Las contraseñas no coinciden.')
-
             # Verificar que la contraseña tenga al menos 6 caracteres
             if len(nueva_contraseña) < 6:
                 return render_template('cambiar_contraseña.html', error='La contraseña debe tener al menos 6 caracteres.')
+
+            if nueva_contraseña != confirmar_contraseña:
+                return render_template('cambiar_contraseña.html', error='Las contraseñas no coinciden.')
 
             # Actualizar contraseña
             usuario = Usuario.query.get(session['user_id'])
@@ -268,3 +309,4 @@ def recuperar_contraseña():
         print(f"Error en recuperar_contraseña: {str(e)}")
         return render_template('recuperar_contraseña.html', 
                             error='Error al recuperar la contraseña. Por favor intenta nuevamente.')
+
