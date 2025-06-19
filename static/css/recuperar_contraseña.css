@@ -1,3 +1,162 @@
+/* Estilos específicos para la página de recuperación de contraseña */
+
+/* Estilos específicos para recuperar contraseña */
+
+/* Contenedor principal */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Tarjeta de autenticación */
+.auth-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Título */
+.auth-card h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+/* Estilos generales de formulario */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-input {
+    padding: 0.8rem 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.form-help {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+/* Contenedor de preguntas */
+.preguntas-container {
+    margin-top: 1.5rem;
+}
+
+/* Preguntas de seguridad */
+.pregunta-seguridad {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e1e1e1;
+}
+
+.pregunta-seguridad label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.pregunta-seguridad .pregunta-texto {
+    color: #666;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.pregunta-seguridad input {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.pregunta-seguridad input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Botones */
+.auth-button {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Enlaces */
+.auth-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e1e1;
+}
+
+.auth-links a {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+}
+
+.auth-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.auth-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
 
 /* Estilos específicos para recuperar contraseña */
 .alert {
@@ -18,74 +177,42 @@
     border: 1px solid #f5c6cb;
 }
 
-.auth-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 30px;
-    margin: 20px 0;
-    max-width: 500px;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
-}
-
-.auth-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.auth-card h2 {
-    color: #333;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.75rem;
-}
-
-.auth-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form-input,
-.pregunta-seguridad input,
-.pregunta-seguridad .respuesta-input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #e1e1e1;
-    border-radius: 8px;
-    font-size: 1rem;
+.btn-primary {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.form-input:focus,
-.pregunta-seguridad input:focus,
-.pregunta-seguridad .respuesta-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-    outline: none;
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
 }
 
+/* Estilos para las preguntas de seguridad */
 .pregunta-seguridad {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    background: #f8f9fa;
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
-    padding: 0.8rem;
     margin-bottom: 1rem;
 }
 
 .pregunta-seguridad label {
     font-weight: 600;
     color: #333;
+}
+
+.pregunta-seguridad .pregunta-texto {
+    background: #f8f9fa;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
 }
 
 .pregunta-seguridad .respuesta-input {
@@ -95,11 +222,15 @@
     padding: 0.8rem 1rem;
     font-size: 1rem;
     transition: all 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
 }
 
+.pregunta-seguridad .respuesta-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+    outline: none;
+}
+
+/* Estilos para el mensaje de éxito */
 .success-message {
     background: #d4edda;
     color: #155724;
