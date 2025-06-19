@@ -22,7 +22,10 @@
     margin: 0 auto;
     padding: 2rem;
 }
-
+/* Campo de correo específico */
+.form-input.email-field {
+    max-width: 500px;
+}
 /* Título */
 .auth-card h2 {
     color: #333;
