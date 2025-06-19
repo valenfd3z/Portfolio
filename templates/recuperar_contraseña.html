@@ -56,7 +56,7 @@
                     id="email"
                     name="email"
                     required
-                    class="form-input"
+                    class="form-input email-field"
                     placeholder="Ingresa tu correo electrónico"
                     value="{{ email if email else '' }}"
                     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
@@ -95,7 +95,7 @@
                         id="respuesta{{ i + 1 }}"
                         name="respuesta{{ i + 1 }}"
                         required
-                        class="form-input"
+                        class="form-input email-field"
                         placeholder="Ingresa tu respuesta"
                         {% if not preguntas %}disabled{% endif %}
                     />
