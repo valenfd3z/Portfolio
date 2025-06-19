@@ -22,10 +22,26 @@
     margin: 0 auto;
     padding: 2rem;
 }
+
 /* Campo de correo específico */
-.form-input.email-field {
+.email-container {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e1e1e1;
+}
+
+.email-container label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.email-container .form-input {
     max-width: 500px;
 }
+
 /* Título */
 .auth-card h2 {
     color: #333;
