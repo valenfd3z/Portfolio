@@ -23,25 +23,6 @@
     padding: 2rem;
 }
 
-/* Campo de correo específico */
-.email-container {
-    background: #f8f9fa;
-    border-radius: 8px;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid #e1e1e1;
-}
-
-.email-container label {
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.75rem;
-}
-
-.email-container .form-input {
-    max-width: 500px;
-}
-
 /* Título */
 .auth-card h2 {
     color: #333;
@@ -72,11 +53,10 @@
     font-size: 1rem;
     transition: all 0.3s ease;
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
     margin: 0 auto;
     display: block;
 }
-
 .form-input:focus,
 .pregunta-seguridad input:focus {
     border-color: #007bff;
