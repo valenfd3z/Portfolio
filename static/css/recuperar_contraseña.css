@@ -75,7 +75,7 @@
 .pregunta-seguridad {
     background: #f8f9fa;
     border-radius: 8px;
-    padding: 1.25rem;
+    padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #e1e1e1;
 }
@@ -83,27 +83,47 @@
 .pregunta-seguridad label {
     font-weight: 600;
     color: #333;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
 }
 
 .pregunta-seguridad .pregunta-texto {
     color: #666;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .pregunta-seguridad input {
     margin-top: 0.5rem;
-    padding: 0.8rem;
+    padding: 0.6rem 0.8rem;
     border: 1px solid #e1e1e1;
     border-radius: 8px;
-    width: 100%;
+    width: 200px;
+    max-width: 200px;
 }
 
 .pregunta-seguridad input:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
     outline: none;
+}
+
+/* Ajustes adicionales para mejorar el espaciado */
+.preguntas-container {
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.pregunta-seguridad {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+}
+
+.pregunta-seguridad .pregunta-texto {
+    margin-bottom: 0.3rem;
 }
 
 /* Botones */
