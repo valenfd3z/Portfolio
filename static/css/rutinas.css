@@ -191,6 +191,7 @@ html {
     border-collapse: collapse;
     margin: 20px 0;
     background-color: #fff;
+    overflow-x: auto;
 }
 
 .tabla-rutinas th,
@@ -198,6 +199,125 @@ html {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
+    min-width: 100px;
+}
+
+/* Videos responsivos */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 ratio */
+    margin: 20px 0;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Mejoras en listas de ejercicios */
+.ejercicios-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.ejercicios-lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.ejercicios-lista li:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+/* Estilos para móviles */
+@media screen and (max-width: 768px) {
+    .tabla-rutinas {
+        display: block;
+        width: 100%;
+    }
+
+    .ejercicios-lista li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .ejercicio-nombre {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .ejercicio-detalles {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .video-container {
+        margin: 15px 0;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .tabla-rutinas {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        background-color: #fff;
+    }
+
+    .tabla-rutinas th,
+    .tabla-rutinas td {
+        padding: 8px;
+        min-width: 90px;
+        font-size: 14px;
+    }
+
+    .tabla-rutinas th {
+        background-color: #f8f9fa;
+    }
+
+    .tabla-rutinas tr {
+        display: table-row;
+        width: auto;
+        overflow-x: visible;
+    }
+
+    .tabla-rutinas td {
+        word-break: break-word;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+    .tabla-rutinas th,
+    .tabla-rutinas td {
+        padding: 6px;
+        min-width: 80px;
+        font-size: 13px;
+    }
+
+    .tabla-rutinas th {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
 
 .tabla-rutinas th {
