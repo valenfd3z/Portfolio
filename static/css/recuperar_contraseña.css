@@ -14,55 +14,13 @@
 /* Tarjeta de autenticación */
 .auth-card {
     background: white;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 14px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    padding: 2rem;
-}
-
-/* Estilos para móviles */
-@media (max-width: 768px) {
-    .auth-card {
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-
-    .form-input,
-    .pregunta-seguridad input {
-        padding: 0.8rem 1rem;
-        font-size: 1rem;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .form-input.email-field {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .auth-card h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .pregunta-seguridad {
-        padding: 1rem;
-        width: 100%;
-    }
-
-    .pregunta-seguridad label {
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .pregunta-seguridad .pregunta-texto {
-        font-size: 0.9rem;
-        width: 100%;
-    }
+    padding: 2.5rem;
 }
 
 /* Título */
