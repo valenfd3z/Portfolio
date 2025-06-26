@@ -34,6 +34,13 @@
     .pregunta-seguridad input {
         padding: 0.8rem 1rem;
         font-size: 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-input.email-field {
+        width: 100%;
         max-width: 100%;
     }
 
@@ -44,14 +51,17 @@
 
     .pregunta-seguridad {
         padding: 1rem;
+        width: 100%;
     }
 
     .pregunta-seguridad label {
         font-size: 1rem;
+        width: 100%;
     }
 
     .pregunta-seguridad .pregunta-texto {
         font-size: 0.9rem;
+        width: 100%;
     }
 }
 
