@@ -275,3 +275,40 @@
         transform: translateY(0);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .auth-form {
+        .form-input,
+        .pregunta-seguridad input,
+        .pregunta-seguridad .respuesta-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-input.email-field {
+            max-width: none;
+            width: 100%;
+        }
+
+        .pregunta-seguridad {
+            margin-bottom: 1.5rem;
+        }
+
+        .pregunta-seguridad label {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .pregunta-seguridad .pregunta-texto {
+            font-size: 1rem;
+            padding: 1rem;
+        }
+
+        .pregunta-seguridad .respuesta-input {
+            padding: 1rem;
+            font-size: 1rem;
+        }
+    }
+}
