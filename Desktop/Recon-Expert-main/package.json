@@ -1,0 +1,33 @@
+{
+  "name": "recon-expert",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://valenfd3z.github.io/Recon-Expert",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.6",
+    "@fontsource/jetbrains-mono": "^5.2.6",
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@pinia/nuxt": "^0.11.2",
+    "@vitejs/plugin-legacy": "^7.1.0",
+    "@vitejs/plugin-vue-jsx": "^5.0.1",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.7.0",
+    "gh-pages": "^6.3.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4",
+    "vue-tsc": "^2.2.12"
+  }
+}

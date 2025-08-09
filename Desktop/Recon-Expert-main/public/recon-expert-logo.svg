@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="#2563EB" fill-opacity="0.1"/>
+  
+  <!-- Magnifying glass handle -->
+  <path d="M320 320L400 400" stroke="#2563EB" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- Magnifying glass circle -->
+  <circle cx="240" cy="240" r="120" fill="none" stroke="#2563EB" stroke-width="24"/>
+  
+  <!-- Shield icon -->
+  <path d="M240 180C240 164 252 152 268 152C284 152 296 164 296 180C296 196 284 208 268 208C252 208 240 196 240 180Z" fill="#2563EB"/>
+  <path d="M240 180C240 164 252 152 268 152C284 152 296 164 296 180C296 196 284 208 268 208C252 208 240 196 240 180Z" stroke="#2563EB" stroke-width="8"/>
+  <path d="M240 180L200 220" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Text -->
+  <text x="256" y="350" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#2563EB">RECON-EXPERT</text>
+  <text x="256" y="390" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#4B5563">Google Dorking Assistant</text>
+</svg>
