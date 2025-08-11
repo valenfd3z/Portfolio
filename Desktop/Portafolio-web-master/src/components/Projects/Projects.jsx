@@ -8,6 +8,7 @@ import './Projects.css';
 // Importar imágenes de ejemplo (reemplaza con tus propias imágenes)
 import project1 from '../../assets/img/project1.jpg';
 import project2 from '../../assets/img/project2.jpg';
+import project3 from '../../assets/img/project3.jpg';
 
 const Projects = () => {
   // Datos de proyectos
@@ -27,32 +28,46 @@ const Projects = () => {
       description: 'Herramienta de reconocimiento avanzado que automatiza búsquedas de Google Dorking para identificar vulnerabilidades y exponer información sensible en sitios web. Ideal para evaluaciones de seguridad y pruebas de penetración.',
       image: project2,
       tags: ['TypeScript', 'Vue', 'OSINT', 'Google Dorking', 'Diseño responsivo'],
-      demoUrl: '#',
+      demoUrl: 'https://valenfd3z.github.io/Recon-Expert/',
       codeUrl: 'https://github.com/valenfd3z/Recon-Expert'
+    },
+    {
+      id: 3,
+      title: 'Sherlock-Web',
+      description: 'Herramienta OSINT automatizada con interfaz gráfica para encontrar cuentas en múltiples plataformas mediante un nombre de usuario. Incluye utilidades para detección de fraudes, identificación de cuentas comprometidas y búsqueda de personas en línea.',
+      image: project3,
+      tags: ['Python + Flask', 'HTML/CSS/JS', 'OSINT', 'Automatización'],
+      demoUrl: '#',
+      codeUrl: '#'
     }
   ];
 
-  // Animaciones
+  // Animaciones mejoradas
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
+    show: {
       opacity: 1,
       transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.2
+        staggerChildren: 0.1,
+        delayChildren: 0.3
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
+    hidden: { 
+      y: 20, 
+      opacity: 0,
+      scale: 0.98
+    },
+    show: {
       y: 0,
       opacity: 1,
+      scale: 1,
       transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 15
+        type: 'tween',
+        ease: 'easeOut',
+        duration: 0.5
       }
     }
   };
@@ -60,7 +75,8 @@ const Projects = () => {
   // Manejar error de carga de imagen
   const handleImageError = (e) => {
     e.target.onerror = null;
-    e.target.src = '/assets/img/placeholder.svg';
+    // Usar un SVG en línea como placeholder
+    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiB2aWV3Qm94PSIwIDAgNDAwIDMwMCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y4ZjlmYSIgLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSIgZmlsbD0iI2FhYSI+SW1hZ2VuIG5vIGRpc3BvbmlibGU8L3RleHQ+Cjwvc3ZnPg==';
     e.target.style.objectFit = 'contain';
     e.target.style.padding = '20px';
     e.target.style.backgroundColor = '#f8f9fa';
@@ -82,7 +98,7 @@ const Projects = () => {
           className="projects-grid"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
+          whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
         >
           {projectsData.map((project) => (
@@ -90,7 +106,10 @@ const Projects = () => {
               key={project.id} 
               className="project-card"
               variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+              }}
             >
               <div className="project-image">
                 <img 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -13,26 +13,7 @@ import {
 import './Navbar.css';
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Efecto para manejar el scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-
-    // Agregar listener para el scroll
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Limpiar listener cuando el componente se desmonte
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrolled]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
+    <nav className={`navbar ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="container">
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
           <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="menu-icon" />

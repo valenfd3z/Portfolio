@@ -75,6 +75,18 @@ const [controls] = useState({ start: () => {} });
   // Datos de habilidades actualizados
   const skillsData = [
     {
+      title: 'Bases de Datos',
+      icon: faDatabaseSolid,
+      color: '#5F3DC4',
+      skills: [
+        { name: 'Optimización', level: 85, icon: faDatabaseSolid },
+        { name: 'PostgreSQL', level: 80, icon: faDatabaseSolid },
+        { name: 'Normalización', level: 82, icon: faDatabaseSolid },
+        { name: 'MongoDB', level: 75, icon: faDatabase },
+        { name: 'Modelado de Datos', level: 80, icon: faServer },
+      ]
+    },
+    {
       title: 'Análisis de Datos',
       icon: faChartLine,
       color: '#4DABF7',
@@ -118,6 +130,7 @@ const [controls] = useState({ start: () => {} });
         { name: 'Análisis de Vulnerabilidades', level: 85, icon: faSearch },
         { name: 'OSINT', level: 80, icon: faGlobe },
         { name: 'Burp Suite', level: 78, icon: faBug },
+        { name: 'Metasploit Framework', level: 75, icon: faTerminal },
         { name: 'SQLMap', level: 75, icon: faNetworkWired },
       ]
     },
@@ -129,6 +142,7 @@ const [controls] = useState({ start: () => {} });
         { name: 'Git & GitHub', level: 90, icon: faGithub },
         { name: 'Linux', level: 85, icon: faLinux },
         { name: 'Docker', level: 80, icon: faDocker },
+        { name: 'AWS', level: 75, icon: faServer },
         { name: 'VSCode', level: 90, icon: faCode },
         { name: 'Windows', level: 85, icon: faMicrosoft },
       ]
