@@ -103,7 +103,9 @@ setupTests.js
 commitlint.config.js
 
 # Archivos de configuración de GitHub
-.github/
+!/.github/
+!/.github/workflows/
+!/.github/workflows/*.yml
 
 # Archivos de configuración de Netlify
 .netlify/
