@@ -5,7 +5,6 @@ import {
   faServer, 
   faTools,
   faChartLine,
-  faSearch,
   faFlask,
   faTerminal,
   faBug,
@@ -17,7 +16,14 @@ import {
   faNetworkWired,
   faShieldHalved,
   faDatabase,
-  faChartPie
+  faChartPie,
+  faLeaf,
+  faTable,
+  faPenRuler,
+  faSitemap,
+  faGaugeHigh,
+  faWrench,
+  faSearch
 } from '@fortawesome/free-solid-svg-icons';
 import { 
   faReact, 
@@ -29,7 +35,8 @@ import {
   faGithub,
   faRProject,
   faMicrosoft,
-  faJs
+  faJs,
+  faWindows
 } from '@fortawesome/free-brands-svg-icons';
 import { motion, useInView } from 'framer-motion';
 import './Skills.css';
@@ -96,6 +103,7 @@ const [controls] = useState({ start: () => {} });
         { name: 'Flask', level: 78, icon: faFlask },
         { name: 'Vue.js', level: 80, icon: faVuejs },
         { name: 'React', level: 85, icon: faReact },
+        { name: '.NET', level: 70, icon: faMicrosoft },
       ]
     },
     {
@@ -106,7 +114,20 @@ const [controls] = useState({ start: () => {} });
         { name: 'Python', level: 85, icon: faPython },
         { name: 'JavaScript', level: 90, icon: faJs },
         { name: 'Bash/Shell', level: 80, icon: faTerminal },
+        { name: 'C#', level: 75, icon: faCode },
         { name: 'Web Scraping', level: 75, icon: faCodeBranch },
+      ]
+    },
+    {
+      title: 'Bases de Datos',
+      icon: faDatabaseSolid,
+      color: '#0EA5E9',
+      skills: [
+        { name: 'MongoDB', level: 78, icon: faLeaf },
+        { name: 'PostgreSQL', level: 80, icon: faTable },
+        { name: 'Diseño', level: 82, icon: faPenRuler },
+        { name: 'Normalización', level: 80, icon: faSitemap },
+        { name: 'Optimización de Consultas', level: 76, icon: faGaugeHigh },
       ]
     },
     {
@@ -129,8 +150,8 @@ const [controls] = useState({ start: () => {} });
         { name: 'Git & GitHub', level: 90, icon: faGithub },
         { name: 'Linux', level: 85, icon: faLinux },
         { name: 'Docker', level: 80, icon: faDocker },
-        { name: 'VSCode', level: 90, icon: faCode },
-        { name: 'Windows', level: 85, icon: faMicrosoft },
+        { name: 'Visual Studio', level: 85, icon: faWrench },
+        { name: 'Windows', level: 85, icon: faWindows },
       ]
     }
   ];

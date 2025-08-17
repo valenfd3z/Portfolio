@@ -115,7 +115,7 @@ const Home = () => {
               variants={fadeInUp}
               transition={{ delay: 0.3 }}
             >
-              Estudiante de Licenciatura en Informática | Ciberseguridad | Ciencia de Datos
+              Pentesting Web | Desarrollo Fullstack | Análisis de Datos
             </motion.h2>
             
             <motion.p 
@@ -123,9 +123,7 @@ const Home = () => {
               variants={fadeInUp}
               transition={{ delay: 0.4 }}
             >
-              Apasionado por la tecnología con enfoque en análisis de datos y seguridad ofensiva.
-              Sumando experiencia en análisis de vulnerabilidades y visualización de datos, comprometido con el 
-              aprendizaje continuo y el desarrollo de herramientas de seguridad.
+              Me dedico al pentesting web y al desarrollo fullstack, integrando análisis de datos para crear soluciones seguras, eficientes y mantenibles.
             </motion.p>
             
             <motion.div 
